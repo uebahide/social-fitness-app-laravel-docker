@@ -1141,3 +1141,33 @@ Context: {\"exception\":{}} at /Users/uewashuuwa/Desktop/React_Native_practice/s
 #30 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #31 {main}
 "} 
+[2025-03-29 21:33:01] local.ERROR: The "--refresh" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--refresh\" option does not exist. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Input/ArgvInput.php:226)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Input/ArgvInput.php(155): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('refresh', NULL)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Input/ArgvInput.php(88): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--refresh')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Input/ArgvInput.php(77): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--refresh', true)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Input/Input.php(53): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Command/Command.php(238): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2025-03-29 21:33:12] local.ERROR: There are no commands defined in the "migratte" namespace.
+
+Did you mean this?
+    migrate {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"migratte\" namespace.
+
+Did you mean this?
+    migrate at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('migratte')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('migratte:refres...')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

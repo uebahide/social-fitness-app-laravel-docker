@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->string('title');
-            $table->string('count')->nullable();
+            $table->string('amount')->nullable();
             $table->unsignedInteger('time_hour');
             $table->unsignedInteger('time_minute');
             $table->timestamps();

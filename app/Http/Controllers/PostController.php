@@ -55,7 +55,7 @@ class PostController extends Controller
     {
         $validated = $request->validate([
             "title" => "required|string|max:255",
-            "count" => "required|string|max:255",
+            "amount" => "required|string|max:255",
             "time_hour" => "required|integer|min:0|max:255",
             "time_minute" => "required|integer|min:0|max:59",
         ]);
@@ -84,7 +84,7 @@ class PostController extends Controller
         Gate::authorize('modify', $post);
         $newPost = $request->validate([
             "title" => "required|string|max:255",
-            "count" => "required|string|max:255",
+            "amount" => "required|string|max:255",
             "time_hour" => "required|integer|min:0|max:255",
             "time_minute" => "required|integer|min:0|max:59",
         ]);

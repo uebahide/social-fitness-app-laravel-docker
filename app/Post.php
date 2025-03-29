@@ -13,7 +13,7 @@ class Post extends Model
     //名前, 回数, 重量, 時間
     protected $fillable = [
         'title',
-        'count',
+        'amount',
         'time_hour',
         'time_minute',
     ];
