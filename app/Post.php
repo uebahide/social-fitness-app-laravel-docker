@@ -10,9 +10,12 @@ class Post extends Model
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
+    //名前, 回数, 重量, 時間
     protected $fillable = [
         'title',
-        'description'
+        'count',
+        'time_hour',
+        'time_minute',
     ];
 
     public function user(){

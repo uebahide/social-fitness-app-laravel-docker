@@ -43,4 +43,15 @@ class User extends Authenticatable
     public function Posts(){
         return $this->hasMany(Post::class);
     }
+
+    public function friends(){
+        return $this->belongsToMany(User::class, 'friendships', 'user_id', 'friend_id')
+                    ->wherePivot('status', 'accepted')
+                    ->withTimestamps();
+    }
+    public function friendRequests(){
+        return $this->belongsToMany(User::class, 'friendships','friend_id', 'user_id')
+                    ->wherePivot('pending')
+                    ->withTimestamps();
+    }
 }
