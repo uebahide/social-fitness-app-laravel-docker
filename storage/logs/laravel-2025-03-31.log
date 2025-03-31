@@ -1,0 +1,822 @@
+[2025-03-31 05:20:58] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 6,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:20:58"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:21:56] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 7,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:21:56"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:23:05] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 8,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:23:05"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:24:05] local.ERROR: Order direction must be "asc" or "desc". {"userId":1,"exception":"[object] (InvalidArgumentException(code: 0): Order direction must be \"asc\" or \"desc\". at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:2628)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Query\\Builder->orderBy('created_at', '')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2123): Illuminate\\Database\\Eloquent\\Builder->forwardCallTo(Object(Illuminate\\Database\\Query\\Builder), 'orderBy', Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Http/Controllers/MessageController.php(30): Illuminate\\Database\\Eloquent\\Builder->__call('orderBy', Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\MessageController->messages(Object(Illuminate\\Http\\Request), '2')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\\Routing\\Controller->callAction('messages', Array)
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\MessageController), 'messages')
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(161): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(92): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), '60', '1')
+#16 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}(Object(Illuminate\\Http\\Request))
+#23 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#24 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#26 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#29 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#32 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#34 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#36 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#37 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#38 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#39 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/server.php(21): require_once('/Users/uewashuu...')
+#40 {main}
+"} 
+[2025-03-31 05:29:34] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 9,
+        "user_id": 1,
+        "text": "Test",
+        "time": "31 Mar 2025, 05:29:34"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:32:47] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 10,
+        "user_id": 1,
+        "text": "Test",
+        "time": "31 Mar 2025, 05:32:47"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:33:21] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 11,
+        "user_id": 1,
+        "text": "Test",
+        "time": "31 Mar 2025, 05:33:21"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:34:01] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 12,
+        "user_id": 1,
+        "text": "Test",
+        "time": "31 Mar 2025, 05:34:01"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:34:19] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 13,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:34:19"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:51:44] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 14,
+        "user_id": 1,
+        "text": "Hi, do you know what time today's party gonna start",
+        "time": "31 Mar 2025, 05:51:44"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:52:47] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 15,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:52:47"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 05:52:54] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 16,
+        "user_id": 1,
+        "text": "Hello",
+        "time": "31 Mar 2025, 05:52:54"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 06:16:34] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 17,
+        "user_id": 1,
+        "text": "H\nH",
+        "time": "31 Mar 2025, 06:16:34"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 06:18:16] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 18,
+        "user_id": 1,
+        "text": "K",
+        "time": "31 Mar 2025, 06:18:16"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 06:18:44] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 19,
+        "user_id": 1,
+        "text": "Kkkkjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "time": "31 Mar 2025, 06:18:44"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 06:19:16] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 20,
+        "user_id": 1,
+        "text": "JjjjjjjjjjjjjjjJjjjjjJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ",
+        "time": "31 Mar 2025, 06:19:16"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 06:28:13] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 21,
+        "user_id": 2,
+        "text": "Hello test1, how are you?",
+        "time": "31 Mar 2025, 06:28:13"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:12:32] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 22,
+        "user_id": 2,
+        "text": "Kkk",
+        "time": "31 Mar 2025, 07:12:32"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:13:41] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 23,
+        "user_id": 2,
+        "text": "H",
+        "time": "31 Mar 2025, 07:13:41"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:14:08] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 24,
+        "user_id": 2,
+        "text": "Ell\nHa",
+        "time": "31 Mar 2025, 07:14:08"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:20:15] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 25,
+        "user_id": 2,
+        "text": "HH\nH",
+        "time": "31 Mar 2025, 07:20:15"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:23:44] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 26,
+        "user_id": 2,
+        "text": "Hello",
+        "time": "31 Mar 2025, 07:23:44"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:23:55] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 27,
+        "user_id": 2,
+        "text": "Hello",
+        "time": "31 Mar 2025, 07:23:55"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:24:32] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 28,
+        "user_id": 2,
+        "text": "Hello",
+        "time": "31 Mar 2025, 07:24:32"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:32:22] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 29,
+        "user_id": 2,
+        "text": "Jhh",
+        "time": "31 Mar 2025, 07:32:22"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:32:29] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 30,
+        "user_id": 2,
+        "text": "J",
+        "time": "31 Mar 2025, 07:32:29"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:33:59] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 31,
+        "user_id": 2,
+        "text": "D",
+        "time": "31 Mar 2025, 07:33:59"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:36:26] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 32,
+        "user_id": 2,
+        "text": "L",
+        "time": "31 Mar 2025, 07:36:26"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:41:17] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 33,
+        "user_id": 2,
+        "text": "Hello",
+        "time": "31 Mar 2025, 07:41:17"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:52:44] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 34,
+        "user_id": 2,
+        "text": "Yyy",
+        "time": "31 Mar 2025, 07:52:44"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:55:00] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 35,
+        "user_id": 2,
+        "text": "Hello",
+        "time": "31 Mar 2025, 07:55:00"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:55:59] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 36,
+        "user_id": 2,
+        "text": "Test",
+        "time": "31 Mar 2025, 07:55:59"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:58:37] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 37,
+        "user_id": 2,
+        "text": "Test",
+        "time": "31 Mar 2025, 07:58:37"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 07:59:48] local.INFO: Broadcasting [App\Events\GotMessage] on channels [private-chat.1_2] with payload:
+{
+    "message": {
+        "id": 38,
+        "user_id": 2,
+        "text": "H",
+        "time": "31 Mar 2025, 07:59:48"
+    },
+    "channelName": "chat.1_2",
+    "socket": null
+}  
+[2025-03-31 08:15:07] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 08:16:10] local.ERROR: The process "yarn add --dev laravel-echo pusher-js && yarn run build" exceeded the timeout of 60 seconds. {"exception":"[object] (Illuminate\\Process\\Exceptions\\ProcessTimedOutException(code: 0): The process \"yarn add --dev laravel-echo pusher-js && yarn run build\" exceeded the timeout of 60 seconds. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Process/PendingProcess.php:261)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/BroadcastingInstallCommand.php(209): Illuminate\\Process\\PendingProcess->run()
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/BroadcastingInstallCommand.php(81): Illuminate\\Foundation\\Console\\BroadcastingInstallCommand->installNodeDependencies()
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\BroadcastingInstallCommand->handle()
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\BroadcastingInstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 {main}
+
+[previous exception] [object] (Symfony\\Component\\Process\\Exception\\ProcessTimedOutException(code: 0): The process \"yarn add --dev laravel-echo pusher-js && yarn run build\" exceeded the timeout of 60 seconds. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/process/Process.php:1181)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/process/Process.php(456): Symfony\\Component\\Process\\Process->checkTimeout()
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/process/Process.php(251): Symfony\\Component\\Process\\Process->wait()
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/HigherOrderTapProxy.php(34): Symfony\\Component\\Process\\Process->run(NULL)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Process/PendingProcess.php(259): Illuminate\\Support\\HigherOrderTapProxy->__call('run', Array)
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/BroadcastingInstallCommand.php(209): Illuminate\\Process\\PendingProcess->run()
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/BroadcastingInstallCommand.php(81): Illuminate\\Foundation\\Console\\BroadcastingInstallCommand->installNodeDependencies()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\BroadcastingInstallCommand->handle()
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call(Array)
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(1094): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\BroadcastingInstallCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 {main}
+"} 
+[2025-03-31 08:22:40] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 08:42:26] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 09:27:34] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 09:35:29] local.ERROR: There are no commands defined in the "broadcast" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"broadcast\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('broadcast')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('broadcast:insta...')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 09:53:40] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:54:21] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:54:35] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:55:57] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:59:12] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:59:27] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 09:59:39] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 10:30:05] local.ERROR: Class "Pusher\Pusher" not found {"exception":"[object] (Error(code: 0): Class \"Pusher\\Pusher\" not found at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php:341)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(319): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(308): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(286): Illuminate\\Broadcasting\\BroadcastManager->createReverbDriver(Array)
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(257): Illuminate\\Broadcasting\\BroadcastManager->resolve('reverb')
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(246): Illuminate\\Broadcasting\\BroadcastManager->get('reverb')
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Broadcasting/BroadcastManager.php(523): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/routes/channels.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/app/Providers/BroadcastServiceProvider.php(19): require('/Users/uewashuu...')
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#16 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\BroadcastServiceProvider), 'App\\\\Providers\\\\B...')
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+"} 
+[2025-03-31 10:30:55] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 10:33:43] local.ERROR: There are no commands defined in the "reverb" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"reverb\" namespace. at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('reverb')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('reverb:install')
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2025-03-31 11:57:59] local.ERROR: Command "oprimize" is not defined.
+
+Did you mean one of these?
+    optimize
+    optimize:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"oprimize\" is not defined.
+
+Did you mean one of these?
+    optimize
+    optimize:clear at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('oprimize')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 {main}
+"} 
+[2025-03-31 15:02:17] local.ERROR: Call to undefined method Laravel\Reverb\Protocols\Pusher\Http\Controllers\ChannelController::createChannel() {"userId":2,"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Reverb\\Protocols\\Pusher\\Http\\Controllers\\ChannelController::createChannel() at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php:47)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Laravel\\Reverb\\Protocols\\Pusher\\Http\\Controllers\\ChannelController), 'createChannel')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(161): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(92): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), '60', '1')
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#16 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}(Object(Illuminate\\Http\\Request))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#24 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#27 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#29 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#31 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#32 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#33 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#34 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/server.php(21): require_once('/Users/uewashuu...')
+#35 {main}
+"} 
+[2025-03-31 15:02:27] local.ERROR: Call to undefined method Laravel\Reverb\Protocols\Pusher\Http\Controllers\ChannelController::createChannel() {"userId":2,"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Reverb\\Protocols\\Pusher\\Http\\Controllers\\ChannelController::createChannel() at /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php:47)
+[stacktrace]
+#0 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Laravel\\Reverb\\Protocols\\Pusher\\Http\\Controllers\\ChannelController), 'createChannel')
+#1 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#2 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#3 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#4 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#5 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#6 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(64): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#7 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#8 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(161): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#9 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(92): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#10 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), '60', '1')
+#11 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#12 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#13 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#14 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#15 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#16 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#17 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}(Object(Illuminate\\Http\\Request))
+#18 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#19 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#21 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#24 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#27 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#29 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#31 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#32 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#33 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/public/index.php(54): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#34 /Users/uewashuuwa/Desktop/React_Native_practice/social-fitness-app-laravel-docker/server.php(21): require_once('/Users/uewashuu...')
+#35 {main}
+"} 

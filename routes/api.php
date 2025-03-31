@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FriendshipController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -21,13 +22,14 @@ use App\User;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('auth:sanctum')->get('/users/{user_name}', [UserController::class, 'getUser']);
+Route::middleware('auth:sanctum')->get('/users/{user_name}', [UserController::class, 'getUser']);//他のユーザーの情報を取得(名前やメールアドレスなど登録済みの情報)
 
-Route::apiResources(['posts' => PostController::class]);
-Route::get('/posts/friend/{friend_id}', [PostController::class, 'getFriendPosts']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
+
+Route::apiResources(['posts' => PostController::class]);
+Route::get('/posts/friend/{friend_id}', [PostController::class, 'getFriendPosts']);
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::get('/friend/status/{friend_id}', [FriendshipController::class, 'getStatus']);
@@ -37,4 +39,10 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('/friend/unfriend/{friend_id}', [FriendshipController::class, 'unfriend']);
     Route::get('/friends', [FriendshipController::class, 'getFriends']);
     Route::get('/requesters', [FriendshipController::class, 'getFriendRequestSenders']);
+});
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::get('/create_channel/{friend_id}', [MessageController::class, 'createChannel']);
+    Route::get('/messages/{friend_id}', [MessageController::class, 'messages'])->name('messages');
+    Route::post('/message/{friend_id}', [MessageController::class, 'message'])->name('message');
 });
