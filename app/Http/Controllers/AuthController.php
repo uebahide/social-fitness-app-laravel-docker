@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function register(Request $request){
+    public function register(Request $request){ 
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -29,7 +29,7 @@ class AuthController extends Controller
 
         $user = User::where('email', $validatedData['email'])->first();
         if(!$user || !Hash::check($validatedData['password'], $user->password)){
-            return response()->json(['message' => 'The provided credentials are incorrect.'], 401);
+            return response()->json(['errors' => ['email' => 'The provided credentials are incorrect.']], 401);
         }
 
         $token = $user->createToken($user->name)->plainTextToken;
