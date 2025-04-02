@@ -7,12 +7,19 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function getUser(Request $request){
-        $user_name = $request->user_name;
-        $users = User::where('name', 'like', $user_name.'%')
+    public function getUsersByNamePrefix(Request $request){
+        $name_prefix = $request->name_prefix;
+        $users = User::where('name', 'like', $name_prefix.'%')
                         ->where('id', '!=', $request->user()->id)
                         ->get();
 
         return response()->json($users);
+    }
+
+    public function getUserById(Request $request){
+        $user_id = (int) $request->user_id; 
+        $user = User::where('id', $user_id)->first();
+
+        return response()->json($user);
     }
 }

@@ -93,6 +93,7 @@ class FriendshipController extends Controller
         if($friendship_request_another_side){
             $friendship_request_another_side->status = 'rejected';
             $friendship_request_another_side->save();
+            return response()->json(['message' => 'unfriended successfully']);
         }
     }
     public function getFriends(Request $request){

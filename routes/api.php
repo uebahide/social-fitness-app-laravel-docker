@@ -21,7 +21,8 @@ use App\User;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('auth:sanctum')->get('/users/{user_name}', [UserController::class, 'getUser']);
+Route::middleware('auth:sanctum')->get('/users/search/{name_prefix}', [UserController::class, 'getUsersByNamePrefix']);
+Route::middleware('auth:sanctum')->get('/users/{user_id}', [UserController::class, 'getUserById']);
 
 Route::apiResources(['posts' => PostController::class]);
 Route::get('/posts/friend/{friend_id}', [PostController::class, 'getFriendPosts']);

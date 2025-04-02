@@ -90,6 +90,10 @@ class PostController extends Controller
         ]);
 
         $post->update($newPost);
+        return response()->json([
+            'message' => 'Post updated successfully',
+            'post' => $post
+        ], 201);
     }
 
     /**
