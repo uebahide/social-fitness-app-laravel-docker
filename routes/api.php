@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FriendshipController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\HomeController;
 use App\User;
 
 /*
@@ -17,6 +19,7 @@ use App\User;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//Broadcast::routes(["middleware" => ["auth:sanctum"]]);//chat用の認証
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -39,3 +42,13 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('/friends', [FriendshipController::class, 'getFriends']);
     Route::get('/requesters', [FriendshipController::class, 'getFriendRequestSenders']);
 });
+
+
+Route::middleware("auth:sanctum")->group(function(){
+    Route::get('/messages/{chat_id}', [MessageController::class, 'messages'])
+        ->name('messages');
+    Route::post('/message/{chat_id}', [MessageController::class, 'message'])
+        ->name('message');
+
+});
+
